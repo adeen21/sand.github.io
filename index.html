@@ -1,1153 +1,985 @@
-﻿<!DOCTYPE html>
-<!--
-	Salient by TEMPLATE STOCK
-	templatestock.co @templatestock
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
+<!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Salient - Free Responsive HTML5 Template | Template Stock</title>
+  <title>Rapid Bootstrap Template</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
 
-  <!-- Custom Google fonts -->
-  <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,300,700' rel='stylesheet' type='text/css'>
-  <link href="http://fonts.googleapis.com/css?family=Crimson+Text:400,600" rel="stylesheet" type="text/css">
-  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Bootstrap CSS Style -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
 
-  <!-- Template CSS Style -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Animate CSS  -->
-  <link rel="stylesheet" href="assets/css/animate.css">
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
-  <!-- FontAwesome 4.3.0 Icons  -->
-  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
 
-  <!-- et line font  -->
-  <link rel="stylesheet" href="assets/css/et-line-font/style.css">
-
-  <!-- BXslider CSS  -->
-  <link rel="stylesheet" href="assets/css/bxslider/jquery.bxslider.css">
-
-  <!-- Owl Carousel CSS Style -->
-  <link rel="stylesheet" href="assets/css/owl-carousel/owl.carousel.css">
-  <link rel="stylesheet" href="assets/css/owl-carousel/owl.theme.css">
-  <link rel="stylesheet" href="assets/css/owl-carousel/owl.transitions.css">
-
-  <!-- Magnific-Popup CSS Style -->
-  <link rel="stylesheet" href="assets/css/magnific-popup/magnific-popup.css">
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-	
+  <!-- =======================================================
+    Theme Name: Rapid
+    Theme URL: https://bootstrapmade.com/rapid-multipurpose-bootstrap-business-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
 </head>
+
 <body>
+  <!--==========================
+  Header
+  ============================-->
+  <header id="header">
 
-  <!-- Preload the Whole Page -->
-  <div id="preloader">      
-    <div id="loading-animation">&nbsp;</div>
-  </div>
-
-  <!-- Navbar -->
-  <header class="header">
-    <nav class="navbar navbar-default navbar-static-top">
+    <div id="topbar">
       <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation-nav">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-           <a class="navbar-brand" href="#"><img src="assets/images/logo.png" alt=""></a>
+        <div class="social-links">
+          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+          <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+          <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+          <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navigation-nav">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a class="section-scroll" href="#wrapper">Home</a></li>
-            <li><a href="#landing-offer">About</a></li>
-            <li><a href="#features-section">Services</a></li>
-            <li><a href="#team-section">Team</a></li>
-            <li><a href="#screenshots-section">Works</a></li>
-            <li><a href="#prices-section">Prices</a></li>
-            <li><a href="#subscribe-section">Subscribe</a></li>
-            <li><a href="#contact-section">Contact</a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container -->
-    </nav>
-  </header>
-  <!-- End Navbar -->
+      </div>
+    </div>
 
-  <div id="wrapper">
+    <div class="container">
 
-  <!-- Hero
-  ================================================== -->
-    <section>
-      <div id="hero-section" class="landing-hero" data-stellar-background-ratio="0">
-        <div class="hero-content">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-8 col-sm-offset-2">
+      <div class="logo float-left">
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <h1 class="text-light"><a href="#intro" class="scrollto"><span>Rapid</span></a></h1>
+        <!-- <a href="#header" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a> -->
+      </div>
 
-                <div class="hero-text">
-                  <div class="herolider">
-                    <ul class="caption-slides">
+      <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#intro">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#team">Team</a></li>
+          <li class="drop-down"><a href="">Drop Down</a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="drop-down"><a href="#">Drop Down 2</a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="#">Drop Down 5</a></li>
+            </ul>
+          </li>
+          <li><a href="#footer">Contact Us</a></li>
+        </ul>
+      </nav><!-- .main-nav -->
+      
+    </div>
+  </header><!-- #header -->
 
-                      <li class="caption">
-                        <h1>A Legacy of Quality</h1>
-                        <div class="div-line"></div>
-                        <p class="hero">Branding, Photography &amp; Web Development</p>
-                      </li>
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro" class="clearfix">
+    <div class="container d-flex h-100">
+      <div class="row justify-content-center align-self-center">
+        <div class="col-md-6 intro-info order-md-first order-last">
+          <h2>Rapid Solutions<br>for Your <span>Business!</span></h2>
+          <div>
+            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+          </div>
+        </div>
+  
+        <div class="col-md-6 intro-img order-md-last order-first">
+          <img src="img/intro-img.svg" alt="" class="img-fluid">
+        </div>
+      </div>
 
-                      <li class="caption">
-                        <h1>RESPONSIVE TEMPLATES</h1>
-                        <div class="div-line"></div>
-                        <p class="hero">Design &amp; Development</p>
-                      </li>
+    </div>
+  </section><!-- #intro -->
 
-                      <li class="caption">
-                        <h1>HIGH QUALITY CODE</h1>
-                        <div class="div-line"></div>
-                        <p class="hero">HTML5 &amp; CSS3</p>
-                      </li>
+  <main id="main">
 
-                    </ul>
-                  </div> <!-- end herolider -->
-                </div> <!-- end hero-text -->
+    <!--==========================
+      About Us Section
+    ============================-->
+    <section id="about">
 
-                <div class="hero-btn">
-                  <a href="#landing-offer" class="btn btn-clean">Read more</a>
-                </div> <!-- end hero-btn -->
+      <div class="container">
+        <div class="row">
 
-              </div> <!-- end col-md-6 -->
-            </div> <!-- end row -->
-          </div> <!-- End container -->
-        </div> <!-- End hero-content -->
-      </div> <!-- End hero-section -->
-    </section>
-    <!-- End hero section -->
+          <div class="col-lg-5 col-md-6">
+            <div class="about-img">
+              <img src="img/about-img.jpg" alt="">
+            </div>
+          </div>
 
-    <!-- Offer
-    ================================================== -->
-    <section>
-      <div id="landing-offer" class="pad-sec">
-        <div class="container">
+          <div class="col-lg-7 col-md-6">
+            <div class="about-content">
+              <h2>About Us</h2>
+              <h3>Odio sed id eos et laboriosam consequatur eos earum soluta.</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <p>Aut dolor id. Sint aliquam consequatur ex ex labore. Et quis qui dolor nulla dolores neque. Aspernatur consectetur omnis numquam quaerat. Sed fugiat nisi. Officiis veniam molestiae. Et vel ut quidem alias veritatis repudiandae ut fugit. Est ut eligendi aspernatur nulla voluptates veniam iusto vel quisquam. Fugit ut maxime incidunt accusantium totam repellendus eum error. Et repudiandae eum iste qui et ut ab alias.</p>
+              <ul>
+                <li><i class="ion-android-checkmark-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                <li><i class="ion-android-checkmark-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+                <li><i class="ion-android-checkmark-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
-          <div class="title-section big-title-sec animated out" data-animation="fadeInUp" data-delay="0">
-            <div class="row">
-              <div class="col-sm-8 col-sm-offset-2">
-                <h2 class="big-title">Some information about us</h2>
-                <h1 class="big-subtitle">We’re small branding &amp; digital studio</h1>
-                <hr>
-                <p class="about-text">Cras porta dolor ut velit imperdiet, quis sodales tellus facilisis. Vestibulum magna turpis, tincidun blandit semper lorem. Mauris nodesterin feugiat neque, a aliquet ligula. Sed non felis tincidunt, facilisis felis vitae, mollis est. Nulla sapien dui, feugiat sed velit a, egestas porta magna.</p>
+    </section><!-- #about -->
+
+
+    <!--==========================
+      Services Section
+    ============================-->
+    <section id="services" class="section-bg">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Services</h3>
+          <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
+        </header>
+
+        <div class="row">
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #fceef3;"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
+              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #e98e06;"></i></div>
+              <h4 class="title"><a href="">Dolor Sitema</a></h4>
+              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #e6fdfc;"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
+              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #eafde7;"><i class="ion-ios-speedometer-outline" style="color:#41cf2e;"></i></div>
+              <h4 class="title"><a href="">Magni Dolores</a></h4>
+              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #e1eeff;"><i class="ion-ios-world-outline" style="color: #2282ff;"></i></div>
+              <h4 class="title"><a href="">Nemo Enim</a></h4>
+              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #ecebff;"><i class="ion-ios-clock-outline" style="color: #8660fe;"></i></div>
+              <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
+              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #services -->
+
+    <!--==========================
+      Why Us Section
+    ============================-->
+    <section id="why-us" class="wow fadeIn">
+      <div class="container-fluid">
+        
+        <header class="section-header">
+          <h3>Why choose us?</h3>
+          <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
+        </header>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="why-us-img">
+              <img src="img/why-us.jpg" alt="" class="img-fluid">
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="why-us-content">
+              <p>Molestiae omnis numquam corrupti omnis itaque. Voluptatum quidem impedit. Odio dolorum exercitationem est error omnis repudiandae ad dolorum sit.</p>
+              <p>
+                Explicabo repellendus quia labore. Non optio quo ea ut ratione et quaerat. Porro facilis deleniti porro consequatur
+                et temporibus. Labore est odio.
+
+                Odio omnis saepe qui. Veniam eaque ipsum. Ea quia voluptatum quis explicabo sed nihil repellat..
+              </p>
+
+              <div class="features wow bounceInUp clearfix">
+                <i class="fa fa-diamond" style="color: #f058dc;"></i>
+                <h4>Corporis dolorem</h4>
+                <p>Commodi quia voluptatum. Est cupiditate voluptas quaerat officiis ex alias dignissimos et ipsum. Soluta at enim modi ut incidunt dolor et.</p>
               </div>
-            </div> <!-- End row -->
-          </div> <!-- end title-section -->
 
-          <div class="offer-boxes">
-
-            <div class="row">
-            <div class="col-sm-4">
-              <div class="offer-post text-center animated out" data-animation="fadeInLeft" data-delay="0">
-                <div class="offer-icon">
-                  <span class="icon-desktop"></span>
-                </div>
-                <h4>DESIGNS &amp; INTERFACES</h4>
-                <p>Mauris eros tortor, tristique cursus porttitor et, luctus sed urna. Quisque id libero risus. Aliquam accumsan erat id sem placerat tempus.</p>
-              </div> <!-- End offer-post -->
-            </div> <!-- End col-sm-4 -->
-
-            <div class="col-sm-4">
-              <div class="offer-post text-center animated out" data-animation="fadeInUp" data-delay="0">
-                <div class="offer-icon">
-                  <span class="icon-piechart"></span>
-                </div>
-                <h4>Branding</h4>
-                <p>Mauris eros tortor, tristique cursus porttitor et, luctus sed urna. Quisque id libero risus. Aliquam accumsan erat id sem placerat tempus.</p>
-              </div> <!-- End offer-post -->
-            </div> <!-- End col-sm-4 -->
-
-            <div class="col-sm-4">
-              <div class="offer-post text-center animated out" data-animation="fadeInRight" data-delay="0">
-                <div class="offer-icon">
-                  <span class="icon-lifesaver"></span>
-                </div>
-                <h4>Dedicated support</h4>
-                <p>Mauris eros tortor, tristique cursus porttitor et, luctus sed urna. Quisque id libero risus. Aliquam accumsan erat id sem placerat tempus.</p>
-              </div> <!-- End offer-post -->
-            </div> <!-- End col-sm-4 -->
-
-            </div> <!-- End row -->
-
-          </div> <!-- End offer-boxes -->
-        </div> <!-- End container -->
-      </div> <!-- End landing-offer-section -->
-    </section>
-    <!-- End offer section -->
-
-    <section>
-      <div class="sep-section"></div>
-    </section>
-
-    <!-- Features services
-    ================================================== -->
-    <section>
-      <div id="features-section" class="pad-sec">
-        <div class="container">
-          <div class="title-section text-center animated out" data-animation="fadeInUp" data-delay="0">
-            <div class="row">
-              <div class="col-sm-8 col-sm-offset-2">
-                <h2>What we do?</h2>
-                <hr>
-                <p>Seamlessly restore client-focused potentialities rather than functional strategic theme areas.</p>
-              </div> <!-- edn col-sm-8 -->
-            </div> <!-- End row -->
-          </div> <!-- end title-section -->
-          <div class="row">
-            <div class="col-md-3 without-padding">
-              <div class="left-features-services">
-                <ul class="features-list">
-                  <!-- feature -->
-                  <li>
-                    <div class="left-features-box animated out" data-animation="fadeInLeft" data-delay="0">
-                      <span class="iconbox"><i class="icon-mobile"></i></span>
-                      <div class="features-box-content">
-                        <h6>Mobile App</h6>
-                        <p>Mauris eros tortor, tristique cursus porttitor et, luctus sed urna.</p>
-                      </div> <!-- end features-box-content -->
-                    </div> <!-- end left-features-box -->
-                  </li>
-                  <!-- feature -->
-                  <li>
-                    <div class="left-features-box animated out" data-animation="fadeInLeft" data-delay="0">
-                      <span class="iconbox"><i class="icon-browser"></i></span>
-                      <div class="features-box-content">
-                        <h6>Web design</h6>
-                        <p>Mauris eros tortor, tristique cursus porttitor et, luctus sed urna.</p>
-                      </div> <!-- end features-box-content -->
-                    </div> <!-- end left-features-box -->
-                  </li>
-                  <!-- feature -->
-                  <li>
-                    <div class="left-features-box animated out" data-animation="fadeInLeft" data-delay="0">
-                      <span class="iconbox"><i class="icon-strategy"></i></span>
-                      <div class="features-box-content">
-                        <h6>Branding</h6>
-                        <p>Mauris eros tortor, tristique cursus porttitor et, luctus sed urna.</p>
-                      </div> <!-- end features-box-content -->
-                    </div> <!-- end left-features-box -->
-                  </li>
-                  <!-- feature -->
-                  <li>
-                    <div class="left-features-box animated out" data-animation="fadeInLeft" data-delay="0">
-                      <span class="iconbox"><i class="icon-hotairballoon "></i></span>
-                      <div class="features-box-content">
-                        <h6>Logo design</h6>
-                        <p>Mauris eros tortor, tristique cursus porttitor et, luctus sed urna.</p>
-                      </div> <!-- end features-box-content -->
-                    </div> <!-- end left-features-box -->
-                  </li>
-                  <!-- feature -->
-                  <li>
-                    <div class="left-features-box animated out" data-animation="fadeInLeft" data-delay="0">
-                      <span class="iconbox"><i class="icon-lightbulb"></i></span>
-                      <div class="features-box-content">
-                        <h6>Illustrations</h6>
-                        <p>Mauris eros tortor, tristique cursus porttitor et, luctus sed urna.</p>
-                      </div> <!-- end features-box-content -->
-                    </div> <!-- end left-features-box -->
-                  </li>
-                </ul> <!-- end features-list -->
-              </div> <!-- end left-features-service -->
-            </div><!--  end col-md-3 -->
-
-            <div class="col-md-6">
-              <div class="features-image animated out" data-animation="fadeInUp" data-delay="0">
-                <img src="assets/images/temp/woman.jpg" alt="">
-              </div> <!-- end features-image -->
-            </div> <!-- end col-md-6 -->
-
-            <div class="col-md-3 without-padding">
-              <div class="right-features-services">
-                <ul class="features-list">
-                  <!-- feature -->
-                  <li>
-                    <div class="right-features-box animated out" data-animation="fadeInRight" data-delay="0">
-                      <span class="iconbox"><i class="icon-tools-2"></i></span>
-                      <div class="features-box-content">
-                        <h6>Easy Customization</h6>
-                        <p>Mauris eros tortor, tristique cursus porttitor et, luctus sed urna.</p>
-                      </div>
-                    </div>
-                  </li>
-                  <!-- feature -->
-                  <li>
-                    <div class="right-features-box animated out" data-animation="fadeInRight" data-delay="0">
-                      <span class="iconbox"><i class="icon-video"></i></span>
-                      <div class="features-box-content">
-                        <h6>Video</h6>
-                        <p>Mauris eros tortor, tristique cursus porttitor et, luctus sed urna</p>
-                      </div>
-                    </div>
-                  </li>
-                  <!-- feature -->
-                  <li>
-                    <div class="right-features-box animated out" data-animation="fadeInRight" data-delay="0">
-                      <span class="iconbox"><i class="icon-camera"></i></span>
-                      <div class="features-box-content">
-                        <h6>Photography</h6>
-                        <p>Mauris eros tortor, tristique cursus porttitor et, luctus sed urna.</p>
-                      </div>
-                    </div>
-                  </li>
-                  <!-- feature -->
-                  <li>
-                    <div class="right-features-box animated out" data-animation="fadeInRight" data-delay="0">
-                      <span class="iconbox"><i class="icon-presentation"></i></span>
-                      <div class="features-box-content">
-                        <h6>Marketing</h6>
-                        <p>Mauris eros tortor, tristique cursus porttitor et, luctus sed urna.</p>
-                      </div>
-                    </div>
-                  </li>
-                  <!-- feature -->
-                  <li>
-                    <div class="right-features-box animated out" data-animation="fadeInRight" data-delay="0">
-                      <span class="iconbox"><i class="fa fa-life-ring"></i></span>
-                      <div class="features-box-content">
-                        <h6>Support</h6>
-                        <p>Mauris eros tortor, tristique cursus porttitor et, luctus sed urna.</p>
-                      </div>
-                    </div>
-                  </li>
-                </ul> <!-- end features-list -->
+              <div class="features wow bounceInUp clearfix">
+                <i class="fa fa-object-group" style="color: #ffb774;"></i>
+                <h4>Eum ut aspernatur</h4>
+                <p>Molestias eius rerum iusto voluptas et ab cupiditate aut enim. Assumenda animi occaecati. Quo dolore fuga quasi autem aliquid ipsum odit. Perferendis doloremque iure nulla aut.</p>
               </div>
-            </div> <!-- end col-md-3 -->
+              
+              <div class="features wow bounceInUp clearfix">
+                <i class="fa fa-language" style="color: #589af1;"></i>
+                <h4>Voluptates dolores</h4>
+                <p>Voluptates nihil et quis omnis et eaque omnis sint aut. Ducimus dolorum aspernatur. Totam dolores ut enim ullam voluptas distinctio aut.</p>
+              </div>
+              
+            </div>
 
-          </div> <!-- end row -->
-        </div> <!-- end container -->
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="container">
+        <div class="row counters">
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">274</span>
+            <p>Clients</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">421</span>
+            <p>Projects</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">1,364</span>
+            <p>Hours Of Support</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">18</span>
+            <p>Hard Workers</p>
+          </div>
+  
+        </div>
+
       </div>
     </section>
-    <!-- End features-section -->
 
-    <!-- Video section
-    ================================================== -->
-    <section>
-      <div id="video-section" data-stellar-background-ratio="0">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 col-sm-offset-3">
-              <div class="video-section-content text-center">
-                <a href="http://vimeo.com/channels/staffpicks/116829150" class="video-pop-up"><i class="fa fa-play"></i></a>
-                <div class="video-head">Introducing Video</div>
-                <div class="video-sub-heading">Check out our video presentation</div>
-              </div>
-            </div> <!-- end col-sm-6 -->
-          </div> <!-- end row -->
-        </div> <!-- end container -->
+    <!--==========================
+      Call To Action Section
+    ============================-->
+    <section id="call-to-action" class="wow fadeInUp">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3 class="cta-title">Call To Action</h3>
+            <p class="cta-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#">Call To Action</a>
+          </div>
+        </div>
+
       </div>
-    </section>
-    <!-- End Video section -->
+    </section><!-- #call-to-action -->
 
-    <!-- Team
-    ================================================== -->
-    <section>
-      <div id="team-section" class="pad-sec">
-        <div class="container">
-          <div class="title-section animated out" data-animation="fadeInUp" data-delay="0">
-            <div class="row">
-              <div class="col-sm-8 col-sm-offset-2">
-                <h2>Our awesome team</h2>
-                <hr>
-                <p>Seamlessly restore client-focused potentialities rather than functional strategic theme areas. Credibly e-enable value-added portals with clicks-and-mortar initiatives.</p>
+    <!--==========================
+      Features Section
+    ============================-->
+    <section id="features">
+      <div class="container">
+
+        <div class="row feature-item">
+          <div class="col-lg-6 wow fadeInUp">
+            <img src="img/features-1.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
+            <h4>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h4>
+            <p>
+              Ipsum in aspernatur ut possimus sint. Quia omnis est occaecati possimus ea. Quas molestiae perspiciatis occaecati qui rerum. Deleniti quod porro sed quisquam saepe. Numquam mollitia recusandae non ad at et a.
+            </p>
+            <p>
+              Ad vitae recusandae odit possimus. Quaerat cum ipsum corrupti. Odit qui asperiores ea corporis deserunt veritatis quidem expedita perferendis. Qui rerum eligendi ex doloribus quia sit. Porro rerum eum eum.
+            </p>
+          </div>
+        </div>
+
+        <div class="row feature-item mt-5 pt-5">
+          <div class="col-lg-6 wow fadeInUp order-1 order-lg-2">
+            <img src="img/features-2.svg" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
+            <h4>Neque saepe temporibus repellat ea ipsum et. Id vel et quia tempora facere reprehenderit.</h4>
+            <p>
+             Delectus alias ut incidunt delectus nam placeat in consequatur. Sed cupiditate quia ea quis. Voluptas nemo qui aut distinctio. Cumque fugit earum est quam officiis numquam. Ducimus corporis autem at blanditiis beatae incidunt sunt. 
+            </p>
+            <p>
+              Voluptas saepe natus quidem blanditiis. Non sunt impedit voluptas mollitia beatae. Qui esse molestias. Laudantium libero nisi vitae debitis. Dolorem cupiditate est perferendis iusto.
+            </p>
+            <p>
+              Eum quia in. Magni quas ipsum a. Quis ex voluptatem inventore sint quia modi. Numquam est aut fuga mollitia exercitationem nam accusantium provident quia.
+            </p>
+          </div>
+          
+        </div>
+
+      </div>
+    </section><!-- #about -->
+
+    <!--==========================
+      Portfolio Section
+    ============================-->
+    <section id="portfolio" class="section-bg">
+      <div class="container">
+
+        <header class="section-header">
+          <h3 class="section-title">Our Portfolio</h3>
+        </header>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/app1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">App 1</a></h4>
+                <p>App</p>
+                <div>
+                  <a href="img/portfolio/app1.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
               </div>
-            </div> <!-- End row -->
-          </div> <!-- end title-section -->
+            </div>
+          </div>
 
-          <div class="team-members">
-            <div class="row">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/web3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Web 3</a></h4>
+                <p>Web</p>
+                <div>
+                  <a href="img/portfolio/web3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
 
-              <!-- member-team -->
-              <div class="col-sm-4">
-                <div class="member-team animated out" data-animation="fadeInLeft" data-delay="0">
-                  <img src="assets/images/team/m1.jpg" alt="">
-                  <div class="magnifier">
-                    <div class="magnifier-inner">
-                      <h3>MICHAEL ROOF</h3>
-                      <p>Co_founder &amp; Designer</p>
-                      <p>We’ll etch your brand onto tangible objects: business cards, ads, stickers, brochures, you name it. You won’t see business cards, ads, stickers, brochures anything until we’re done drooling at the result.</p>
-                      <ul class="social-icons">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/app2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">App 2</a></h4>
+                <p>App</p>
+                <div>
+                  <a href="img/portfolio/app2.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
 
-                        <li><a data-rel="tooltip" data-toggle="tooltip" data-trigger="hover" data-placement="bottom" data-title="Facebook" href="#" data-original-title="" title=""><i class="fa fa-facebook"></i></a></li>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/card2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Card 2</a></h4>
+                <p>Card</p>
+                <div>
+                  <a href="img/portfolio/card2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
 
-                        <li><a data-rel="tooltip" data-toggle="tooltip" data-trigger="hover" data-placement="bottom" data-title="Twitter" href="#" data-original-title="" title=""><i class="fa fa-twitter"></i></a></li>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/web2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Web 2</a></h4>
+                <p>Web</p>
+                <div>
+                  <a href="img/portfolio/web2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
 
-                        <li><a data-rel="tooltip" data-toggle="tooltip" data-trigger="hover" data-placement="bottom" data-title="Google Plus" href="#" data-original-title="" title=""><i class="fa fa-google-plus"></i></a></li>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/app3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">App 3</a></h4>
+                <p>App</p>
+                <div>
+                  <a href="img/portfolio/app3.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
 
-                        <li><a data-rel="tooltip" data-toggle="tooltip" data-trigger="hover" data-placement="bottom" data-title="Skype" href="#" data-original-title="" title=""><i class="fa fa-skype"></i></a></li>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/card1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Card 1</a></h4>
+                <p>Card</p>
+                <div>
+                  <a href="img/portfolio/card1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 1" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
 
-                      </ul>
-                    </div> <!-- End magnifier-inner -->
-                  </div> <!-- End magnifier -->
-                </div> <!-- End member-team -->
-              </div> <!-- End col-sm-4 -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/card3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Card 3</a></h4>
+                <p>Card</p>
+                <div>
+                  <a href="img/portfolio/card3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 3" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
 
-              <!-- member-team -->
-              <div class="col-sm-4">
-                <div class="member-team animated out" data-animation="fadeInUp" data-delay="0">
-                  <img src="assets/images/team/m2.jpg" alt="">
-                  <div class="magnifier">
-                    <div class="magnifier-inner">
-                      <h3>CHARLES WHITE</h3>
-                      <p>Co_founder &amp; Designer</p>
-                      <p>We’ll etch your brand onto tangible objects: business cards, ads, stickers, brochures, you name it. You won’t see business cards, ads, stickers, brochures anything until we’re done drooling at the result.</p>
-                      <ul class="social-icons">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/web1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Web 1</a></h4>
+                <p>Web</p>
+                <div>
+                  <a href="img/portfolio/web1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
 
-                        <li><a data-rel="tooltip" data-toggle="tooltip" data-trigger="hover" data-placement="bottom" data-title="Facebook" href="#" data-original-title="" title=""><i class="fa fa-facebook"></i></a></li>
+        </div>
 
-                        <li><a data-rel="tooltip" data-toggle="tooltip" data-trigger="hover" data-placement="bottom" data-title="Twitter" href="#" data-original-title="" title=""><i class="fa fa-twitter"></i></a></li>
+      </div>
+    </section><!-- #portfolio -->
 
-                        <li><a data-rel="tooltip" data-toggle="tooltip" data-trigger="hover" data-placement="bottom" data-title="Google Plus" href="#" data-original-title="" title=""><i class="fa fa-google-plus"></i></a></li>
+    <!--==========================
+      Clients Section
+    ============================-->
+    <section id="testimonials">
+      <div class="container">
 
-                        <li><a data-rel="tooltip" data-toggle="tooltip" data-trigger="hover" data-placement="bottom" data-title="Skype" href="#" data-original-title="" title=""><i class="fa fa-skype"></i></a></li>
+        <header class="section-header">
+          <h3>Testimonials</h3>
+        </header>
 
-                      </ul>
-                    </div> <!-- End magnifier-inner -->
-                  </div> <!-- End magnifier -->
-                </div> <!-- End member-team -->
-              </div> <!-- End col-sm-4 -->
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
 
-              <!-- member-team -->
-              <div class="col-sm-4">
-                <div class="member-team animated out" data-animation="fadeInRight" data-delay="0">
-                  <img src="assets/images/team/m3.jpg" alt="">
-                  <div class="magnifier">
-                    <div class="magnifier-inner">
-                      <h3>MARTIN CAMBRIGE</h3>
-                      <p>Head Support</p>
-                      <p>We’ll etch your brand onto tangible objects: business cards, ads, stickers, brochures, you name it. You won’t see business cards, ads, stickers, brochures anything until we’re done drooling at the result.</p>
-                      <ul class="social-icons">
-
-                        <li><a data-rel="tooltip" data-toggle="tooltip" data-trigger="hover" data-placement="bottom" data-title="Facebook" href="#" data-original-title="" title=""><i class="fa fa-facebook"></i></a></li>
-
-                        <li><a data-rel="tooltip" data-toggle="tooltip" data-trigger="hover" data-placement="bottom" data-title="Twitter" href="#" data-original-title="" title=""><i class="fa fa-twitter"></i></a></li>
-
-                        <li><a data-rel="tooltip" data-toggle="tooltip" data-trigger="hover" data-placement="bottom" data-title="Google Plus" href="#" data-original-title="" title=""><i class="fa fa-google-plus"></i></a></li>
-
-                        <li><a data-rel="tooltip" data-toggle="tooltip" data-trigger="hover" data-placement="bottom" data-title="Skype" href="#" data-original-title="" title=""><i class="fa fa-skype"></i></a></li>
-
-                      </ul>
-                    </div> <!-- End magnifier-inner -->
-                  </div> <!-- End magnifier -->
-                </div> <!-- End member-team -->
-              </div> <!-- End col-sm-4 -->
+            <div class="owl-carousel testimonials-carousel wow fadeInUp">
+    
+              <div class="testimonial-item">
+                <img src="img/testimonial-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+                <p>
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                </p>
+              </div>
+    
+              <div class="testimonial-item">
+                <img src="img/testimonial-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+                <p>
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                </p>
+              </div>
+    
+              <div class="testimonial-item">
+                <img src="img/testimonial-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+                <p>
+                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                </p>
+              </div>
+    
+              <div class="testimonial-item">
+                <img src="img/testimonial-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+                <p>
+                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                </p>
+              </div>
 
             </div>
-          </div> <!-- End team-members -->
-        </div> <!-- End container -->
-      </div> <!-- End team-section -->
-    </section>
-    <!-- End team section -->
 
-    <!-- About Team
-    ================================================== -->
-    <section>
-      <div id="about-team">
-        <div class="container">
-            <div class="row">
-
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="title-section">
-                  <h3>Our team skills</h3>
-                </div>
-                <p>Sit ad etiam dissentias, viderer intellegebat usu et, per aliquam delectus ut. In inermis suavitate tincidunt quo, habeo lorem quis nulla eget, dictum pretium magna. Praesent id metus mattis tellus consectetur posuere. Aenean vel enim ut massa luctus efficitur a nec magna.</p>
-              </div> <!-- end col-md-6 -->
-
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="progress-bars">
-                  
-                  <!-- skillbar -->
-                  <div class="p-bar">
-                    <!-- meta -->
-                    <div class="progress-meta">
-                      <h6 class="progress-title">photoshop</h6>
-                      <h6 class="progress-value">75%</h6>
-                    </div>
-
-                    <div class="progress">
-                      <div class="progress-bar" aria-valuenow="75" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-
-                  </div> <!-- end p-bar -->
-
-                  <!-- skillbar -->
-                  <div class="p-bar">
-                    <!-- meta -->
-                    <div class="progress-meta">
-                      <h6 class="progress-title">html</h6>
-                      <h6 class="progress-value">95%</h6>
-                    </div>
-
-                    <div class="progress">
-                      <div class="progress-bar" aria-valuenow="95" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-
-                  </div> <!-- end p-bar -->
-
-                  <!-- skillbar -->
-                  <div class="p-bar">
-                    <!-- meta -->
-                    <div class="progress-meta">
-                      <h6 class="progress-title">css</h6>
-                      <h6 class="progress-value">85%</h6>
-                    </div>
-
-                    <div class="progress">
-                      <div class="progress-bar" aria-valuenow="85" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-
-                  </div> <!-- end p-bar -->
-
-                  <!-- skillbar -->
-                  <div class="p-bar">
-                    <!-- meta -->
-                    <div class="progress-meta">
-                      <h6 class="progress-title">jquery</h6>
-                      <h6 class="progress-value">73%</h6>
-                    </div>
-
-                    <div class="progress">
-                      <div class="progress-bar" aria-valuenow="73" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-
-                  </div> <!-- end p-bar -->
-
-                </div> <!-- end skills-bars -->
-              </div> <!-- end col-md-6 -->
-            </div> <!-- end row -->
+          </div>
         </div>
+
+
       </div>
-    </section>
-    <!-- End About Team -->
+    </section><!-- #testimonials -->
 
-    <!-- Banner-Services
-    ================================================== -->
-    <section>
-      <div id="banner-services" data-stellar-background-ratio="0">
-        <div class="container">
-          <div class="row">
+    <!--==========================
+      Team Section
+    ============================-->
+    <section id="team" class="section-bg">
+      <div class="container">
+        <div class="section-header">
+          <h3>Team</h3>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        </div>
 
-            <div class="col-sm-6">
-              <div class="banner-content animated out" data-animation="fadeInUp" data-delay="0">
-                <h3 class="banner-heading">Looking for exclusive digital services?</h3>
-                <div class="banner-decription">
-                  Proin fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Integer non dapibus diam, ac eleifend lectus.
-                </div> <!-- end banner-decription -->
-                <div>
-                  <a href="contact.html" class="btn btn-sm btn-clean">Lets talk</a>
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp">
+            <div class="member">
+              <img src="img/team-1.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Walter White</h4>
+                  <span>Chief Executive Officer</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
                 </div>
-              </div> <!-- end banner-content -->
-            </div> <!-- end col-sm-6 -->
+              </div>
+            </div>
+          </div>
 
-            <div class="col-sm-6">
-              <div class="banner-image animated out" data-animation="fadeInUp" data-delay="0">
-                <img src="assets/images/temp/banner-img.png" alt="">
-              </div> <!-- end banner-image -->
-            </div> <!-- end col-sm-6 -->
-            
-          </div> <!-- end row -->
-        </div> <!-- end container -->
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="member">
+              <img src="img/team-2.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Sarah Jhonson</h4>
+                  <span>Product Manager</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="member">
+              <img src="img/team-3.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>William Anderson</h4>
+                  <span>CTO</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="member">
+              <img src="img/team-4.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Amanda Jepson</h4>
+                  <span>Accountant</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
       </div>
-    </section>
-    <!-- End Banner services section -->
+    </section><!-- #team -->
 
-    <!-- Features App 2
-    ================================================== -->
-    <section>
-      <div id="features-app-section-2" class="pad-sec">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 features-app-content-left animated out" data-animation="fadeInLeft" data-delay="0">
-              <div class="section_header">
-                <h2>Simple. Intuitive. <span>Powerful.</span></h2> 
-              </div> <!-- End section_header -->
-                <p> Lorem ipsum <span>dolor</span> sit amet, consectetur adipisicing elit.Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <!--==========================
+      Clients Section
+    ============================-->
+    <section id="clients" class="wow fadeInUp">
+      <div class="container">
 
-                <ul class="features-app-list">
+        <header class="section-header">
+          <h3>Our Clients</h3>
+        </header>
 
-                  <!-- feature -->
-                  <li>
-                    <div class="feature-app-box animated out" data-animation="fadeInLeft" data-delay="0">
-                      <div class="app-feature-icon pull-left"><span class="pe-7s-graph"></span></div>
-                      <div class="feature-app-box-content">
-                        <h6>Beautiful, modern design</h6>
-                        <p>Mauris vehicula tortor id augue rutrum consequat ac at massa. Interdum et malesuada fames ac ante ipsum primis.</p>
-                      </div>
-                    </div>
-                  </li>
+        <div class="owl-carousel clients-carousel">
+          <img src="img/clients/client-1.png" alt="">
+          <img src="img/clients/client-2.png" alt="">
+          <img src="img/clients/client-3.png" alt="">
+          <img src="img/clients/client-4.png" alt="">
+          <img src="img/clients/client-5.png" alt="">
+          <img src="img/clients/client-6.png" alt="">
+          <img src="img/clients/client-7.png" alt="">
+          <img src="img/clients/client-8.png" alt="">
+        </div>
 
-                  <!-- feature -->
-                  <li>
-                    <div class="feature-app-box animated out" data-animation="fadeInLeft" data-delay="0">
-                      <div class="app-feature-icon pull-left"><span class="pe-7s-config"></span></div>
-                      <div class="feature-app-box-content">
-                        <h6>Easy to set up</h6>
-                        <p>Phasellus consequat facilisis volutpat ma faucibus odio vitae semper. Ae volutpat lobortis.</p>
-                      </div>
-                    </div>
-                  </li>
+      </div>
+    </section><!-- #clients -->
 
-                  <!-- feature -->
-                  <li>
-                    <div class="feature-app-box animated out" data-animation="fadeInLeft" data-delay="0">
-                      <div class="app-feature-icon pull-left"><span class="pe-7s-refresh-2"></span></div>
-                      <div class="feature-app-box-content">
-                        <h6>Stunning flexibility</h6>
-                        <p>Phasellus consequat facilisis volutpat ma faucibus odio vitae semper. Ae volutpat lobortis.</p>
-                      </div>
-                    </div>
-                  </li>
 
-                  <!-- feature -->
-                  <li>
-                    <div class="feature-app-box animated out" data-animation="fadeInLeft" data-delay="0">
-                      <div class="app-feature-icon pull-left"><span class="pe-7s-lock"></span></div>
-                      <div class="feature-app-box-content">
-                        <h6>Reliable and Secure Platform</h6>
-                        <p>Phasellus consequat facilisis volutpat ma faucibus odio vitae semper. Ae volutpat lobortis.</p>
-                      </div>
-                    </div>
-                  </li>
-                  
+    <!--==========================
+      Pricing Section
+    ============================-->
+    <section id="pricing" class="wow fadeInUp section-bg">
+
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Pricing</h3>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        </header>
+
+        <div class="row flex-items-xs-middle flex-items-xs-center">
+      
+          <!-- Basic Plan  -->
+          <div class="col-xs-12 col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h3><span class="currency">$</span>19<span class="period">/month</span></h3>
+              </div>
+              <div class="card-block">
+                <h4 class="card-title"> 
+                  Basic Plan
+                </h4>
+                <ul class="list-group">
+                  <li class="list-group-item">Odio animi voluptates</li>
+                  <li class="list-group-item">Inventore quisquam et</li>
+                  <li class="list-group-item">Et perspiciatis suscipit</li>
+                  <li class="list-group-item">24/7 Support System</li>
                 </ul>
-            </div> <!-- End feature-content -->
-
-            <div class="col-sm-5 col-sm-offset-1 text-center img-app-right animated out" data-animation="fadeInRight" data-delay="0">
-              <figure>
-                <img src="assets/images/app/phone-2.png" alt="">
-              </figure>
-            </div> <!-- End col-sm-8 -->
-
-          </div> <!-- End row -->
-        </div> <!-- End container -->
-      </div> <!-- End feature-section -->
-    </section>
-    <!-- End Features App 2 section -->
-
-    <section>
-      <div class="sep-section"></div>
-    </section>
-
-    <!-- Creative section-1
-    ================================================== -->
-    <section>
-      <div id="creative-section-1" class="pad-sec">
-        <div class="container">
-          <div class="row">
-
-            <div class="col-sm-7 img-creative-left text-center animated out" data-animation="fadeInLeft" data-delay="0">
-              <figure>
-                <img src="assets/images/temp/cover.png" alt="">
-              </figure>
-            </div> <!-- End col-sm-8 -->
-
-            <div class="col-sm-5 creative-content-right animated out" data-animation="fadeInRight" data-delay="0">
-              <div class="section_header">
-                <h2>Creative project</h2> 
-              </div> <!-- End section_header -->
-
-                <p> Lorem ipsum <span>dolor</span> sit amet, consectetur adipisicing elit.Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-
-              <div class="view-more">
-                <a href="#services-section" class="btn btn-lg btn-primary">View online</a>
+                <a href="#" class="btn">Choose Plan</a>
               </div>
-            </div> <!-- End feature-content -->
-
-          </div> <!-- End row -->
-        </div> <!-- End container -->
-      </div> <!-- End feature-section -->
-    </section>
-    <!-- End Creative section-1 -->
-
-    <section>
-      <div class="sep-section"></div>
-    </section>
-
-    <!-- Screenshots
-    ================================================== -->
-      <section>
-        <div id="screenshots-section" class="pad-sec">
-          <div class="container">
-           <div class="title-section text-center animated out" data-animation="fadeInUp" data-delay="0">
-              <div class="row">
-                <div class="col-sm-8 col-sm-offset-2">
-                  <h2>Screenshots gallery</h2>
-                  <hr>
-                  <p>Seamlessly restore client-focused potentialities rather than functional strategic theme areas.</p>
+            </div>
+          </div>
+      
+          <!-- Regular Plan  -->
+          <div class="col-xs-12 col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h3><span class="currency">$</span>29<span class="period">/month</span></h3>
               </div>
-            </div> <!-- End row -->
-          </div> <!-- end title-section -->
-
-            <div class="row">
-              <div class="col-md-12">
-                <div class="screenshots-carousel animated out" data-animation="fadeInUp" data-delay="0">
-
-                  <div class="shot">
-                    <div class="screen">
-                      <a class="zoom" href="assets/images/screenshots/1.jpg"><img src="assets/images/screenshots/1.jpg" alt="screenshot"></a>
-                    </div> <!-- end screen -->
-                  </div> <!-- end shot -->
-
-                  <div class="shot">
-                    <div class="screen">
-                      <a class="zoom" href="assets/images/screenshots/2.jpg"><img src="assets/images/screenshots/1.jpg" alt="screenshot"></a>
-                    </div> <!-- end screen -->
-                  </div> <!-- end shot -->
-
-                  <div class="shot">
-                    <div class="screen">
-                      <a class="zoom" href="assets/images/screenshots/1.jpg"><img src="assets/images/screenshots/2.jpg" alt="screenshot"></a>
-                    </div> <!-- end screen -->
-                  </div> <!-- end shot -->
-
-                  <div class="shot">
-                    <div class="screen">
-                      <a class="zoom" href="assets/images/screenshots/2.jpg"><img src="assets/images/screenshots/1.jpg" alt="screenshot"></a>
-                    </div> <!-- end screen -->
-                  </div> <!-- end shot -->
-
-
-                  <div class="shot">
-                    <div class="screen">
-                      <a class="zoom" href="assets/images/screenshots/1.jpg"><img src="assets/images/screenshots/2.jpg" alt="screenshot"></a>
-                    </div> <!-- end screen -->
-                  </div> <!-- end shot -->
-
-                  <div class="shot">
-                    <div class="screen">
-                      <a class="zoom" href="assets/images/screenshots/2.jpg"><img src="assets/images/screenshots/1.jpg" alt="screenshot"></a>
-                    </div> <!-- end screen -->
-                  </div> <!-- end shot -->
-
-                  <div class="shot">
-                    <div class="screen">
-                      <a class="zoom" href="assets/images/screenshots/1.jpg"><img src="assets/images/screenshots/2.jpg" alt="screenshot"></a>
-                    </div> <!-- end screen -->
-                  </div> <!-- end shot -->
-
-                  <div class="shot">
-                    <div class="screen">
-                      <a class="zoom" href="assets/images/screenshots/2.jpg"><img src="assets/images/screenshots/1.jpg" alt="screenshot"></a>
-                    </div> <!-- end screen -->
-                  </div> <!-- end shot -->
-
-                </div> <!-- end screenshots-carousel -->
-              </div> <!-- end col-md-12 -->
-            </div> <!-- end row -->
-          </div><!--  end container -->
+              <div class="card-block">
+                <h4 class="card-title"> 
+                  Regular Plan
+                </h4>
+                <ul class="list-group">
+                  <li class="list-group-item">Odio animi voluptates</li>
+                  <li class="list-group-item">Inventore quisquam et</li>
+                  <li class="list-group-item">Et perspiciatis suscipit</li>
+                  <li class="list-group-item">24/7 Support System</li>
+                </ul>
+                <a href="#" class="btn">Choose Plan</a>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Premium Plan  -->
+          <div class="col-xs-12 col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h3><span class="currency">$</span>39<span class="period">/month</span></h3>
+              </div>
+              <div class="card-block">
+                <h4 class="card-title"> 
+                  Premium Plan
+                </h4>
+                <ul class="list-group">
+                  <li class="list-group-item">Odio animi voluptates</li>
+                  <li class="list-group-item">Inventore quisquam et</li>
+                  <li class="list-group-item">Et perspiciatis suscipit</li>
+                  <li class="list-group-item">24/7 Support System</li>
+                </ul>
+                <a href="#" class="btn">Choose Plan</a>
+              </div>
+            </div>
+          </div>
+      
         </div>
-      </section>
-      <!-- End screenshots-section -->
-
-      <!-- Clients-section
-    ================================================== -->
-    <section>
-      <div id="clients-section" class="clients-bg" data-stellar-background-ratio="0">
-        <div class="container">
-          <div class="row">
-             
-             <!-- client -->
-            <div class="col-xs-4 col-sm-2">
-              <div class="client">
-                <a href="#"><img src="assets/images/clients/client_1.png" alt=""></a>
-              </div>
-            </div> <!-- end col-xs-6 -->
-
-             <!-- client -->
-            <div class="col-xs-4 col-sm-2">
-              <div class="client">
-                <a href="#"><img src="assets/images/clients/client_2.png" alt=""></a>
-              </div>
-            </div> <!-- end col-xs-6 -->
-
-             <!-- client -->
-            <div class="col-xs-4 col-sm-2">
-              <div class="client">
-                <a href="#"><img src="assets/images/clients/client_3.png" alt=""></a>
-              </div>
-            </div> <!-- end col-xs-6 -->
-
-             <!-- client -->
-            <div class="col-xs-4 col-sm-2">
-              <div class="client">
-                <a href="#"><img src="assets/images/clients/client_4.png" alt=""></a>
-              </div>
-            </div> <!-- end col-xs-6 -->
-
-             <!-- client -->
-            <div class="col-xs-4 col-sm-2">
-              <div class="client">
-                <a href="#"><img src="assets/images/clients/client_1.png" alt=""></a>
-              </div>
-            </div> <!-- end col-xs-6 -->
-
-             <!-- client -->
-            <div class="col-xs-4 col-sm-2">
-              <div class="client">
-                <a href="#"><img src="assets/images/clients/client_2.png" alt=""></a>
-              </div>
-            </div> <!-- end col-xs-6 -->
-
-          </div> <!-- End row -->
-        </div> <!-- End container -->
-      </div> 
-    </section>
-    <!-- End clients-section -->
-
-    <!-- Prices
-    ================================================== -->
-    <section>
-      <div id="prices-section" class="pad-sec">
-        <div class="container">
-          <div class="title-section text-center animated out" data-animation="fadeInUp" data-delay="0">
-            <div class="row">
-              <div class="col-sm-8 col-sm-offset-2">
-                <h2>Our Prices</h2>
-                <hr>
-                <p>Seamlessly restore client-focused potentialities rather than functional strategic theme areas.</p>
-              </div>
-            </div> <!-- End row -->
-          </div> <!-- end title-section -->
-
-          <div class="row">
-            <div class="col-sm-4">
-              <ul class="price-table animated out" data-animation="fadeInLeft" data-delay="0">
-                  <li class="title-price">
-                    <h3>Basic Pack</h3>
-                  </li>
-                  <li class="price-box">
-                      <p class="price"><span class="currency">$</span>5.99</p>
-                      <p class="months">per month</p>
-                  </li>
-                  <li><p>Full Access</p></li>
-                  <li>
-                      <p>5 Projects</p>
-                  </li>
-                  <li>
-                      <p>5 GB Storage</p>
-                  </li>
-                  <li>
-                      <p>100GB Monthly Bandwidth</p>
-                  </li>
-                  <li><p>Premium Support</p></li>
-                  <li>
-                      <p>Your domain</p>
-                  </li>
-                  <li>
-                      <a href="#" class="btn btn-sm btn-dark">Purchase</a>
-                  </li>
-              </ul>
-            </div> <!-- end col-sm-4 -->
-
-            <div class="col-sm-4">
-              <ul class="price-table animated out" data-animation="fadeInUp" data-delay="0">
-                  <li class="title-price">
-                    <h3>Basic Pack</h3>
-                  </li>
-                  <li class="price-box">
-                      <p class="price"><span class="currency">$</span>5.99</p>
-                      <p class="months">per month</p>
-                  </li>
-                  <li><p>Full Access</p></li>
-                  <li>
-                      <p>5 Projects</p>
-                  </li>
-                  <li>
-                      <p>5 GB Storage</p>
-                  </li>
-                  <li>
-                      <p>100GB Monthly Bandwidth</p>
-                  </li>
-                  <li><p>Premium Support</p></li>
-                  <li>
-                      <p>Your domain</p>
-                  </li>
-                  <li>
-                      <a href="#" class="btn btn-sm btn-dark">Purchase</a>
-                  </li>
-              </ul>
-            </div> <!-- end col-sm-4 -->
-
-            <div class="col-sm-4">
-              <ul class="price-table animated out" data-animation="fadeInRight" data-delay="0">
-                  <li class="title-price">
-                    <h3>Basic Pack</h3>
-                  </li>
-                  <li class="price-box">
-                      <p class="price"><span class="currency">$</span>5.99</p>
-                      <p class="months">per month</p>
-                  </li>
-                  <li><p>Full Access</p></li>
-                  <li>
-                      <p>5 Projects</p>
-                  </li>
-                  <li>
-                      <p>5 GB Storage</p>
-                  </li>
-                  <li>
-                      <p>100GB Monthly Bandwidth</p>
-                  </li>
-                  <li><p>Premium Support</p></li>
-                  <li>
-                      <p>Your domain</p>
-                  </li>
-                  <li>
-                      <a href="#" class="btn btn-sm btn-dark">Purchase</a>
-                  </li>
-              </ul>
-            </div> <!-- end col-sm-4 -->
-          </div> <!-- end row -->
-        </div> <!-- end container -->
       </div>
-    </section>
-    <!-- End prices section -->
 
-    <!-- Subscribe-section
-    ================================================== -->
-    <section>
-      <div id="subscribe-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
-              <div class="newsletter-title text-center">
-                <h4>Stay informed with our newsletter</h4>
-              </div> <!-- end newsletter-title -->
-              <form class="form-inline subscription-form mailchimp" id="subscribeform">
-                  <!-- Subscription messages -->
-                  <h5 class="subscription-success"></h5>
-                  <h5 class="subscription-error"></h5>
-                <!-- Email input -->
-                <div class="form-group newsletter-field">
-                  <input type="email" name="EMAIL" class="form-control" id="subscriber-email" placeholder="jane.doe@example.com">
-                </div>
-                <!-- Subscribe button -->
-                <button type="submit" id="subscribe-button" class="btn btn-sm btn-dark">Subscribe</button>
-              </form>
-            </div> <!-- end col-sm-6 -->
-          </div> <!-- end row -->
-        </div> <!-- end container -->
-      </div> <!-- end subscribe-section -->
-    </section>
-    <!-- End subscribe section -->
+    </section><!-- #pricing -->
 
-    <section>
-      <div class="sep-section"></div>
-    </section>
+    <!--==========================
+      Frequently Asked Questions Section
+    ============================-->
+    <section id="faq">
+      <div class="container">
+        <header class="section-header">
+          <h3>Frequently Asked Questions</h3>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        </header>
 
-      <!-- Testimonial
-      ================================================== -->      
-      <section>
-        <div id="testimonials-section">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+        <ul id="faq-list" class="wow fadeInUp">
+          <li>
+            <a data-toggle="collapse" class="collapsed" href="#faq1">Non consectetur a erat nam at lectus urna duis? <i class="ion-android-remove"></i></a>
+            <div id="faq1" class="collapse" data-parent="#faq-list">
+              <p>
+                Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+              </p>
+            </div>
+          </li>
 
-                <div class="testimonials-carousel">
+          <li>
+            <a data-toggle="collapse" href="#faq2" class="collapsed">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque? <i class="ion-android-remove"></i></a>
+            <div id="faq2" class="collapse" data-parent="#faq-list">
+              <p>
+                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+              </p>
+            </div>
+          </li>
 
-                  <ul class="testimonials-slider">
-                    
-                    <!-- Testimonial -->
-                    <li>
-                      <img src="assets/images/temp/client-photo.jpg" alt="">
-                      <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculusultricies porta posuere.</p>
-                      <div class="testimonials-author"> ClasDesign - Front End Developer </div>
-                    </li>
-                    
-                    <!-- Testimonial -->
-                    <li>
-                      <img src="assets/images/temp/client-photo.jpg" alt="">
-                      <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculusultricies porta posuere <a href="#">http://goo.gl/1OhxkS</a>.</p>
-                      <div class="testimonials-author">John Doe -  Web Developer</div>
-                    </li>
-                    
-                    <!-- Testimonial -->
-                    <li>
-                      <img src="assets/images/temp/client-photo.jpg" alt="">
-                      <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculusultricies porta posuere. <a href="#">http://goo.gl/1OhxkS</a>.</p>
-                      <div class="testimonials-author">John Doe - Web Designer</div>
-                    </li>
+          <li>
+            <a data-toggle="collapse" href="#faq3" class="collapsed">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi? <i class="ion-android-remove"></i></a>
+            <div id="faq3" class="collapse" data-parent="#faq-list">
+              <p>
+                Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+              </p>
+            </div>
+          </li>
 
-                  </ul>
+          <li>
+            <a data-toggle="collapse" href="#faq4" class="collapsed">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla? <i class="ion-android-remove"></i></a>
+            <div id="faq4" class="collapse" data-parent="#faq-list">
+              <p>
+                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+              </p>
+            </div>
+          </li>
 
-                  <div class="tc-arrows">
-                     <div class="tc-arrow-left"></div>
-                     <div class="tc-arrow-right"></div>
-                  </div> <!-- end tc-arrows -->
-                </div> <!-- end testimonials-carousel -->
+          <li>
+            <a data-toggle="collapse" href="#faq5" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="ion-android-remove"></i></a>
+            <div id="faq5" class="collapse" data-parent="#faq-list">
+              <p>
+                Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+              </p>
+            </div>
+          </li>
 
-              </div> <!-- end col-md-8 -->
-            </div> <!-- end row -->
-          </div> <!-- end container -->
-        </div>
-      </section>
-      <!-- end testimonial section -->
+          <li>
+            <a data-toggle="collapse" href="#faq6" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="ion-android-remove"></i></a>
+            <div id="faq6" class="collapse" data-parent="#faq-list">
+              <p>
+                Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
+              </p>
+            </div>
+          </li>
 
-    <section>
-      <div class="sep-section"></div>
-    </section>
+        </ul>
 
-    <!-- Google map
-    ================================================== -->
-    <section>
-      <div id="module-maps">
-        <div id="map"></div>
       </div>
-    </section>
-    <!-- End Google map -->
+    </section><!-- #faq -->
 
-    <!-- Contact-section
-    ================================================== -->
-    <section>
-      <div id="contact-section" class="pad-sec">
+  </main>
 
-        <div class="container">
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer" class="section-bg">
+    <div class="footer-top">
+      <div class="container">
 
-          <div class="title-section text-center animated out" data-animation="fadeInUp" data-delay="0">
-              <div class="row">
-                <div class="col-sm-8 col-sm-offset-2">
-                  <h2>Get in touch</h2>
-                  <hr>
-                  <p>Sed ac mattis justo. Vestibulum facilisis at arcu ac porta. Vivamus at ipsum at quam hendrerit gravida.</p>
-              </div>
-            </div> <!-- End row -->
-          </div> <!-- end title-section -->
+        <div class="row">
 
-          <div class="form-wrapper">
+          <div class="col-lg-6">
+
             <div class="row">
-              <div class="col-md-8 col-md-offset-2">
-                
-                <!-- form fields -->
-                <form action="assets/php/contact.php.htm" method="post" name="contactform" id="contactform" class="animated out" data-animation="fadeInUp" data-delay="0">
 
-                  <fieldset>
-                    <div class="form-group">
-                      <input class="form-control br-b" type="text" name="name" id="name" placeholder="Name">
-                    </div>
+                <div class="col-sm-6">
 
-                    <div class="form-group">
-                      <input class="form-control br-b" type="email" name="email" id="email" placeholder="Email">
-                    </div>
-
-                    <div class="form-group">
-                      <textarea class="form-control br-b" name="message" id="message" placeholder="Message..."></textarea>
-                    </div>
-                  </fieldset>
-                  
-                  <!-- submit button -->
-                  <div class="form-group">
-                    <input type="submit" name="submit" value="Send message" id="submit" class="btn btn-sm btn-dark">
+                  <div class="footer-info">
+                    <h3>Rapid</h3>
+                    <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
                   </div>
 
-                  <div id="alert"></div>
+                  <div class="footer-newsletter">
+                    <h4>Our Newsletter</h4>
+                    <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem.</p>
+                    <form action="" method="post">
+                      <input type="email" name="email"><input type="submit"  value="Subscribe">
+                    </form>
+                  </div>
 
-                </form>
+                </div>
 
-              </div> <!-- end col-md-8 -->
-            </div> <!-- end row -->
-          </div>  <!-- end form-wrapper -->
+                <div class="col-sm-6">
+                  <div class="footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">About us</a></li>
+                      <li><a href="#">Services</a></li>
+                      <li><a href="#">Terms of service</a></li>
+                      <li><a href="#">Privacy policy</a></li>
+                    </ul>
+                  </div>
 
-        </div> <!-- end container -->
+                  <div class="footer-links">
+                    <h4>Contact Us</h4>
+                    <p>
+                      A108 Adam Street <br>
+                      New York, NY 535022<br>
+                      United States <br>
+                      <strong>Phone:</strong> +1 5589 55488 55<br>
+                      <strong>Email:</strong> info@example.com<br>
+                    </p>
+                  </div>
 
-      </div> <!-- End contact-section -->
-    </section>
+                  <div class="social-links">
+                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                  </div>
 
-    <!-- Contact-info
-    ================================================== -->
-    <section>
-      <div class="contact-info">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4">
-              <a href="#"><i class="pe-7s-map-marker"></i>123 Road. New York.</a>
-            </div> <!-- End col-sm-4 -->
-            <div class="col-sm-4">
-            <a href="tel:+123000456"><i class="pe-7s-phone"></i>+123 000 456</a>
+                </div>
+
             </div>
-             <div class="col-sm-4">
-              <a href="mailto:hello@hotmail.com"><i class="pe-7s-mail"></i>hello@hotmail.com</a>
-             </div>
-          </div> <!-- End row -->
-        </div> <!-- End container -->
-      </div> <!-- End contact-info -->
-    </section>
 
-    <!-- Footer
-    ================================================== -->
-    <footer>
-      <div id="footer-section" class="text-center">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8 col-sm-offset-2">
-              <ul class="footer-social-links">
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Dribbble</a></li>
-                <li><a href="#">Behance</a></li>
-                <li><a href="#">Pinterest</a></li>
-              </ul>
-              <p class="copyright">
-                &copy; 2016 Salient - Created By <a href="http://templatestock.co">Template Stock</a>
-              </p>
-            </div> <!-- End col-sm-8 -->
-          </div> <!-- End row -->
-        </div> <!-- End container -->
-      </div> <!-- End footer-section  -->
-    </footer>
-    <!-- End footer -->
+          </div>
 
-  </div> <!-- End wrapper -->
+          <div class="col-lg-6">
 
-  <!-- Back-to-top
-  ================================================== -->
-  <div class="back-to-top">
-    <i class="fa fa-angle-up fa-3x"></i>
-  </div> <!-- end back-to-top -->
+            <div class="form">
+              
+              <h4>Send us a message</h4>
+              <p>Eos ipsa est voluptates. Nostrum nam libero ipsa vero. Debitis quasi sit eaque numquam similique commodi harum aut temporibus.</p>
+              <form action="" method="post" role="form" class="contactForm">
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <div class="validation"></div>
+                </div>
 
-  <!-- JS libraries and scripts -->
-  <script src="assets/js/jquery-1.11.3.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/bootstrap-hover-dropdown.min.js"></script>
-  <script src="assets/js/jquery.appear.min.js"></script>
-  <script src="assets/js/jquery.bxslider.min.js"></script>
-  <script src="assets/js/jquery.owl.carousel.min.js"></script>
-  <script src="assets/js/jquery.countTo.js"></script>
-  <script src="assets/js/jquery.easing.1.3.js"></script>
-  <script src="assets/js/jquery.imagesloaded.min.js"></script>
-  <script src="assets/js/jquery.isotope.js"></script>
-  <script src="assets/js/jquery.placeholder.js"></script>
-  <script src="assets/js/jquery.smoothscroll.js"></script>
-  <script src="assets/js/jquery.stellar.min.js"></script>
-  <script src="assets/js/jquery.waypoints.js"></script>
-  <script src="assets/js/jquery.fitvids.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/jquery.ajaxchimp.min.js"></script>
-  <script src="assets/js/jquery.countdown.js"></script>
-  <script src="assets/js/jquery.navbar-scroll.js"></script>
-  <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-  <script src="assets/js/jquery.gmaps.js"></script>
-  <script src="assets/js/main.js"></script>
+                <div id="sendmessage">Your message has been sent. Thank you!</div>
+                <div id="errormessage"></div>
+
+                <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
+              </form>
+            </div>
+
+          </div>
+
+          
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Rapid</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Rapid
+        -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- Uncomment below i you want to use a preloader -->
+  <!-- <div id="preloader"></div> -->
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/mobile-nav/mobile-nav.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
 
 </body>
 </html>
