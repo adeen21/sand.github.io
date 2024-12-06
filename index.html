@@ -703,17 +703,29 @@
           <h3>Pricing</h3>
           <p>Please note that all prices are indicative and subject to a final quote provided after a consultation.</p>
         </header>
+            <!-- Added Pricing Toggle Buttons -->
+      <div class="radio-toolbar-3">
+        <input type="radio" id="monthly" name="subscription-type" value="monthly" checked>
+        <label for="monthly" onclick="togglePricing('monthly')">Monthly</label>
+
+        <input type="radio" id="annual" name="subscription-type" value="annual">
+        <label for="annual" onclick="togglePricing('annual')">Yearly</label>
+      </div>
 
         <div class="row flex-items-xs-middle flex-items-xs-center">
-      
+
           <!-- Basic Plan  -->
           <div class="col-xs-12 col-lg-4">
             <div class="card">
               <div class="card-header">
-                <h3><span class="currency">$</span>299<span class="period">/month</span></h3>
+                <h3>
+                  <span class="currency">$</span>
+                  <span class="price" data-monthly="299" data-annual="249">249</span>
+                  <span class="period">/month</span>
+                </h3>
               </div>
               <div class="card-block">
-                <h4 class="card-title"> 
+                <h4 class="card-title">
                   Basic
                 </h4>
                 <ul class="list-group">
@@ -730,15 +742,19 @@
               </div>
             </div>
           </div>
-      
+
           <!-- Regular Plan  -->
           <div class="col-xs-12 col-lg-4">
             <div class="card">
               <div class="card-header">
-                <h3><span class="currency">$</span>799<span class="period">/month</span></h3>
+                <h3>
+                  <span class="currency">$</span>
+                  <span class="price" data-monthly="799" data-annual="599">599</span>
+                  <span class="period">/month</span>
+                </h3>
               </div>
               <div class="card-block">
-                <h4 class="card-title"> 
+                <h4 class="card-title">
                   Rapid Growth
                 </h4>
                 <ul class="list-group">
@@ -750,22 +766,26 @@
                   <li class="list-group-item">Monthly Reporting: Detailed analytics with actionable insights.</li>
                   <li class="list-group-item">Custom Software: Local Software for Stores Synced With Online Platform.</li>
                   <li class="list-group-item">Advanced Online Reputation Management & Lead Generation</li>
-                  <li class="list-group-item">Oneime Payment for Package Creation $2,499</li>
+                  <li class="list-group-item">Onetime Payment for Package Creation $2,499</li>
 
                 </ul>
                 <a href="#" class="btn">Choose Plan</a>
               </div>
             </div>
           </div>
-      
+
           <!-- Premium Plan  -->
           <div class="col-xs-12 col-lg-4">
             <div class="card">
               <div class="card-header">
-                <h3><span class="currency">$</span>1,499<span class="period">/month</span></h3>
+                <h3>
+                  <span class="currency">$</span>
+                  <span class="price" data-monthly="1499" data-annual="1199">1199</span>
+                  <span class="period">/month</span>
+                </h3>
               </div>
               <div class="card-block">
-                <h4 class="card-title"> 
+                <h4 class="card-title">
                   Enterprise
                 </h4>
                 <ul class="list-group">
@@ -786,11 +806,52 @@
               </div>
             </div>
           </div>
-      
+
         </div>
       </div>
 
     </section><!-- #pricing -->
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const monthlyBtn = document.getElementById('monthly');
+  const annualBtn = document.getElementById('annual');
+  const prices = document.querySelectorAll('.price');
+  const periods = document.querySelectorAll('.period');
+
+  // Function to update pricing and styles
+  const updatePricing = (type) => {
+    if (type === 'monthly') {
+      prices.forEach(price => {
+        price.textContent = price.getAttribute('data-monthly');
+      });
+      periods.forEach(period => {
+        period.textContent = '/month';
+      });
+    } else if (type === 'annual') {
+      prices.forEach(price => {
+        price.textContent = price.getAttribute('data-annual');
+      });
+      periods.forEach(period => {
+        period.textContent = '/month';
+      });
+    }
+  };
+
+  // Event listener for Monthly button
+  monthlyBtn.addEventListener('change', () => {
+    if (monthlyBtn.checked) {
+      updatePricing('monthly');
+    }
+  });
+
+  // Event listener for Annual button
+  annualBtn.addEventListener('change', () => {
+    if (annualBtn.checked) {
+      updatePricing('annual');
+    }
+  });
+});
+  </script>
 
     <!--==========================
       Frequently Asked Questions Section

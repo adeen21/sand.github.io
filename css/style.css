@@ -1567,3 +1567,38 @@ h6 {
     margin-bottom: 25px;
   }
 }
+.radio-toolbar-3 {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 8px 0 rgba(0, 0, 0, 0.19);
+  height: 40px;
+  width: fit-content;
+  display: flex;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 20px; /* Add space below the buttons */
+}
+
+.radio-toolbar-3 label {
+  width: 100%;
+  display: inline-block;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.radio-toolbar-3 label:hover {
+  background-color: #e0e0e0;
+}
+
+.radio-toolbar-3 input[type="radio"] {
+  display: none;
+}
+
+.radio-toolbar-3 input[type="radio"]:checked+label {
+  background-color: #1bb1dc;
+  color: #fff;
+}
