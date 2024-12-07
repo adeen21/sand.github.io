@@ -224,6 +224,8 @@ h6 {
   height: 100vh;
   position: relative;
   overflow: hidden;
+  background: url('img/fallback-image.png') no-repeat center center; /* Fallback image */
+  background-size: cover; /* Ensures the image covers the entire section */
 }
 
 #intro video {
@@ -235,7 +237,6 @@ h6 {
   object-fit: cover; /* Ensures the video fills the entire section */
   z-index: -1; /* Places the video behind other content */
 }
-
 #intro .intro-info {
   position: relative;
   z-index: 1; /* Keeps content above the video */
