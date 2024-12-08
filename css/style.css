@@ -1061,6 +1061,8 @@ h6 {
   opacity: 0.5;
   transition: 0.3s;
   padding: 15px 0;*/
+  opacity: 0.5;
+  transition: 0.3s;
   max-height: 100px; /* Set consistent height */
   max-width: 100%; /* Prevent overflow */
   object-fit: contain; /* Maintain aspect ratio */
