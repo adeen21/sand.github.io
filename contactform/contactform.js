@@ -126,7 +126,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
   document.getElementById('sendmessage').classList.remove('show');
   document.getElementById('errormessage').classList.remove('show');
 
-  emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form, 'YOUR_PUBLIC_KEY')
+  emailjs.sendForm('service_ek4oquw', 'template_idnoju5', form, 'VGfOGzIGXBFSpITum')
     .then(function(response) {
       console.log('SUCCESS!', response.status, response.text);
       document.getElementById('sendmessage').classList.add('show'); // Show success message
