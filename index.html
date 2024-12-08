@@ -1041,11 +1041,13 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Save the email to Google Sheets
+    // Save the email to Google Sheets via Google Apps Script
     fetch("https://script.google.com/macros/s/AKfycbzdzsVIVwn_bBErNFJ1HS2-0gOYyQ5oEfRYl8BwpBxJ22L2m-XVmWb5laWV1MvlxuyQQQ/exec", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email: email }), // Ensure the request payload matches the expected format
     })
       .then((response) => {
         if (!response.ok) {
@@ -1057,7 +1059,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (data.status === "success") {
           // Send a Thank-You email via EmailJS
           emailjs
-            .send("service_ek4oquw", "template_idnoju5", { email })
+            .send("service_ek4oquw", "template_idnoju5", { email: email }) // Ensure proper parameter structure
             .then(
               function () {
                 alert("Thank you for subscribing! A confirmation email has been sent.");
@@ -1072,11 +1074,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       })
       .catch((error) => {
-        console.error("Error saving email:", error.message || error);
+        console.error("Error:", error.message || error);
         alert("Failed to subscribe. Please try again later.");
       });
   });
 </script>
+
 
 
 
