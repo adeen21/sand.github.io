@@ -1063,37 +1063,31 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
 
           <div class="col-lg-6">
+  <div class="form">
+    <h4>Send us a message</h4>
+    <p>Have questions or need assistance? Send us a message, and our team will get back to you promptly. We're here to help!</p>
+    <form id="contactForm">
+      <div class="form-group">
+        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required />
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required />
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required />
+      </div>
+      <div class="form-group">
+        <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message" required></textarea>
+      </div>
+      <div id="success-message" style="display: none; color: green;">Your message has been sent. Thank you!</div>
+      <div id="error-message" style="display: none; color: red;">An error occurred. Please try again.</div>
+      <div class="text-center">
+        <button type="submit" id="sendMessageButton" title="Send Message">Send Message</button>
+      </div>
+    </form>
+  </div>
+</div>
 
-            <div class="form">
-              
-              <h4>Send us a message</h4>
-              <p>Have questions or need assistance? Send us a message, and our team will get back to you promptly. We're here to help!</p>
-              <form action="" method="post" role="form" class="contactForm">
-                <div class="form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                  <div class="validation"></div>
-                </div>
-
-                <div id="sendmessage">Your message has been sent. Thank you!</div>
-                <div id="errormessage"></div>
-
-                <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
-              </form>
-            </div>
-
-          </div>
 
           
 
@@ -1135,12 +1129,49 @@ document.addEventListener('DOMContentLoaded', () => {
   <script src="lib/isotope/isotope.pkgd.min.js"></script>
   <script src="lib/lightbox/js/lightbox.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("VGfOGzIGXBFSpITum"); // Replace with your EmailJS public key
+    })();
+  </script>
 
   <!-- Contact Form JavaScript File -->
   <script src="contactform/contactform.js"></script>
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent form from reloading the page
 
-  <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
+  // Collect form data
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const subject = document.getElementById("subject").value;
+  const message = document.getElementById("message").value;
+
+  // Prepare parameters for EmailJS
+  const params = {
+    name: name,
+    email: email,
+    subject: subject,
+    message: message,
+  };
+
+  // Send email using EmailJS
+  emailjs.send("service_ek4oquw", "template_ysp819a", params)
+    .then(function(response) {
+      console.log("SUCCESS!", response.status, response.text);
+      document.getElementById("success-message").style.display = "block"; // Show success message
+      document.getElementById("error-message").style.display = "none"; // Hide error message
+      document.getElementById("contactForm").reset(); // Clear the form
+    })
+    .catch(function(error) {
+      console.error("FAILED...", error);
+      document.getElementById("success-message").style.display = "none"; // Hide success message
+      document.getElementById("error-message").style.display = "block"; // Show error message
+    });
+});
+
+</script>
  <script>
   const image = document.getElementById('interactive-image');
   let isDragging = false;
