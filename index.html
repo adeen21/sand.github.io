@@ -1041,32 +1041,32 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Save the email to Google Sheets via Google Apps Script
+    // Save the email to Google Sheets
     fetch("https://script.google.com/macros/s/AKfycbzdzsVIVwn_bBErNFJ1HS2-0gOYyQ5oEfRYl8BwpBxJ22L2m-XVmWb5laWV1MvlxuyQQQ/exec", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ email: email }), // Ensure the request payload matches the expected format
+      body: JSON.stringify({ email: email }), // Send email data as JSON
     })
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to save subscription on the server.");
         }
-        return response.json(); // Parse the response JSON
+        return response.json();
       })
       .then((data) => {
         if (data.status === "success") {
           // Send a Thank-You email via EmailJS
           emailjs
-            .send("service_ek4oquw", "template_idnoju5", { email: email }) // Ensure proper parameter structure
+            .send("service_ek4oquw", "template_idnoju5", { email: email })
             .then(
               function () {
                 alert("Thank you for subscribing! A confirmation email has been sent.");
               },
               function (error) {
                 console.error("Failed to send email:", error);
-                alert("Subscription successful, but confirmation email failed.");
+                alert("Subscription saved, but confirmation email failed.");
               }
             );
         } else {
@@ -1074,13 +1074,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       })
       .catch((error) => {
-        console.error("Error:", error.message || error);
+        console.error("Error saving email:", error.message || error);
         alert("Failed to subscribe. Please try again later.");
       });
   });
 </script>
-
-
 
 
                 </div>
