@@ -44,7 +44,7 @@
     <div id="topbar">
       <div class="container">
         <div class="social-links">
-          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+          <a href="#" class="twitter"><i class="fa fa-youtube-play"></i></a>
           <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
           <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
           <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
@@ -99,7 +99,8 @@
 
       <div class="col-md-6 intro-img order-md-last order-first">
         <!--<img src="img/intro-img.svg" alt="" class="img-fluid">-->
-        <img src="img/apple-touch-icon.png" alt="Rotating Image" class="img-fluid rotating-img">
+        <!--<img src="img/apple-touch-icon.png" alt="Rotating Image" class="img-fluid rotating-img">-->
+        <img id="interactive-image" src="img/apple-touch-icon.png" alt="Rotating Image" class="img-fluid rotating-img">
       </div>
     </div>
   </div>
@@ -678,7 +679,7 @@
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Sheikh Adeen</h4>
-                  <span>Project Manager</span>
+                  <span>Product Manager</span>
                   <div class="social">
                     <a href=""><i class="fa fa-twitter"></i></a>
                     <a href=""><i class="fa fa-facebook"></i></a>
@@ -760,14 +761,14 @@
         </header>
 
         <div class="owl-carousel clients-carousel">
-          <img src="img/clients/client-1.png" alt="">
-          <img src="img/clients/client-2.png" alt="">
-          <img src="img/clients/client-3.png" alt="">
-          <img src="img/clients/client-4.png" alt="">
-          <img src="img/clients/client-5.png" alt="">
-          <img src="img/clients/client-6.png" alt="">
-          <img src="img/clients/client-7.png" alt="">
-          <img src="img/clients/client-8.png" alt="">
+          <img src="img/testimonial-1.jpeg" alt="">
+          <img src="img/testimonial-2.svg" alt="">
+          <img src="img/testimonial-3.png" alt="">
+          <img src="img/testimonial-4.jpeg" alt="">
+          <img src="img/testimonial-5.png" alt="">
+          <img src="img/testimonial-6.png" alt="">
+          <img src="img/testimonial-7.png" alt="">
+          <img src="img/testimonial-8.webp" alt="">
         </div>
 
       </div>
@@ -1049,10 +1050,10 @@ document.addEventListener('DOMContentLoaded', () => {
                   </div>
 
                   <div class="social-links">
-                    <a href="https://youtube.com/@visionaryvault_ai?si=m3p46B53_p4DSaqN$0" class="Youtube"><i class="fa fa-youtube"></i></a>
+                    <a href="https://youtube.com/@visionaryvault_ai?si=m3p46B53_p4DSaqN$0" class="Youtube"><i class="fa fa-youtube-play"></i></a>
                     <a href="https://www.instagram.com/sadn.uk/$0" class="facebook"><i class="fa fa-facebook"></i></a>
                     <a href="https://www.instagram.com/sadn.uk/$0" class="instagram"><i class="fa fa-instagram"></i></a>
-                    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                    <a href="" class="linkedin"><i class="fa fa-linkedin"></i></a>
                   </div>
 
                 </div>
@@ -1140,6 +1141,115 @@ document.addEventListener('DOMContentLoaded', () => {
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+ <script>
+  const image = document.getElementById('interactive-image');
+  let isDragging = false;
+  let rotation = 0; // Current rotation in degrees
+  let startX; // Start position of the drag
+  let velocity = 0; // Speed of the rotation
+  let momentum; // Momentum effect interval
+  let isInteracted = false; // Tracks if the user interacted
+
+  // Disable default rotation on interaction
+  function disableDefaultRotation() {
+    image.style.animation = 'none';
+    isInteracted = true;
+  }
+
+  // Re-enable default rotation after interaction ends
+  function enableDefaultRotation() {
+    if (!isInteracted) return;
+    isInteracted = false;
+    clearInterval(momentum);
+    image.style.animation = 'rotate 10s linear infinite';
+  }
+
+  // Disable scrolling
+  function disableScroll() {
+    document.body.style.overflow = 'hidden';
+  }
+
+  // Enable scrolling
+  function enableScroll() {
+    document.body.style.overflow = '';
+  }
+
+  // For mouse events
+  image.addEventListener('mousedown', (e) => {
+    e.preventDefault(); // Prevent default drag behavior
+    disableDefaultRotation();
+    disableScroll();
+    isDragging = true;
+    startX = e.clientX;
+    velocity = 0; // Reset velocity
+    image.style.cursor = 'grabbing';
+    clearInterval(momentum); // Stop any ongoing momentum
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (isDragging) {
+      const currentX = e.clientX;
+      const deltaX = currentX - startX;
+      velocity = deltaX * 0.9; // Update velocity (adjust sensitivity)
+      rotation -= velocity;
+      image.style.transform = `rotate(${rotation}deg)`;
+      startX = currentX; // Update start position
+    }
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (isDragging) {
+      isDragging = false;
+      enableScroll();
+      image.style.cursor = 'grab';
+      applyMomentum(); // Apply momentum effect
+    }
+  });
+
+  // For touch events
+  image.addEventListener('touchstart', (e) => {
+    e.preventDefault(); // Prevent default touch behavior
+    disableDefaultRotation();
+    disableScroll();
+    isDragging = true;
+    startX = e.touches[0].clientX;
+    velocity = 0; // Reset velocity
+    clearInterval(momentum); // Stop any ongoing momentum
+  });
+
+  document.addEventListener('touchmove', (e) => {
+    if (isDragging) {
+      const currentX = e.touches[0].clientX;
+      const deltaX = currentX - startX;
+      velocity = deltaX * 0.9; // Update velocity (adjust sensitivity)
+      rotation += velocity;
+      image.style.transform = `rotate(${rotation}deg)`;
+      startX = currentX; // Update start position
+    }
+  });
+
+  document.addEventListener('touchend', () => {
+    if (isDragging) {
+      isDragging = false;
+      enableScroll();
+      applyMomentum(); // Apply momentum effect
+    }
+  });
+
+  function applyMomentum() {
+    momentum = setInterval(() => {
+      rotation += velocity; // Continue rotation
+      velocity *= 0.95; // Apply friction (reduce velocity)
+      image.style.transform = `rotate(${rotation}deg)`;
+      if (Math.abs(velocity) < 0.1) {
+        clearInterval(momentum); // Stop momentum when velocity is minimal
+        enableDefaultRotation(); // Re-enable default rotation
+      }
+    }, 16); // Approximately 60 frames per second
+  }
+</script>
+
+
 
 </body>
 </html>

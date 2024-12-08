@@ -1047,14 +1047,25 @@ h6 {
 --------------------------------*/
 
 #clients {
+  /*padding: 60px 0;*/
+  display: flex; /* Use flexbox for alignment */
+  flex-wrap: wrap; /* Ensure the logos wrap if they overflow */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
   padding: 60px 0;
+  gap: 20px; /* Space between logos */
 }
 
 #clients img {
-  max-width: 80%;
+  /*max-width: 80%;
   opacity: 0.5;
   transition: 0.3s;
-  padding: 15px 0;
+  padding: 15px 0;*/
+  max-height: 100px; /* Set consistent height */
+  max-width: 100%; /* Prevent overflow */
+  object-fit: contain; /* Maintain aspect ratio */
+  display: block; /* Ensure images align properly */
+  margin: auto; /* Center each logo within its container */
 }
 
 #clients img:hover {
@@ -1078,6 +1089,18 @@ h6 {
 
 #clients .owl-dot.active {
   background-color: #1bb1dc;
+}
+
+@media (max-width: 768px) {
+  #clients {
+    flex-direction: column; /* Stack logos vertically on small screens */
+    gap: 15px; /* Reduce spacing between logos for smaller screens */
+  }
+
+  #clients img {
+    max-height: 80px; /* Adjust logo height for smaller screens */
+    width: auto; /* Maintain aspect ratio */
+  }
 }
 
 /* Pricing Section
@@ -1635,9 +1658,10 @@ h6 {
     transform: rotate(360deg);
   }
 }
-
 .rotating-img {
-  animation: rotate 20s linear infinite; /* Adjust time (20s) for slower or faster rotation */
+ /* animation: rotate 20s linear infinite; Adjust time (20s) for slower or faster rotation */
+  animation: rotate 10s linear infinite; /* Default rotation */;
+  cursor: grab;
   display: block;
   margin: 0 auto;
 }
