@@ -224,7 +224,7 @@ h6 {
   height: 100vh;
   position: relative;
   overflow: hidden;
-  background: url('img/fallback-image.png') no-repeat center center; /* Fallback image */
+  background: url('../img/fallback-image.png') no-repeat center center; /* Fallback image */
   background-size: cover; /* Ensures the image covers the entire section */
 }
 
