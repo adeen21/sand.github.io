@@ -1035,14 +1035,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const email = document.querySelector('input[name="email"]').value;
 
+    // Validate email format
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
     // Save the email to Google Sheets
-    fetch("https://script.google.com/macros/s/AKfycby_vZO9Lz0zUyyIAdYN_nehDsdfg1aXPEojOhJRw7LDd07Kt9Z-iDl7hpRa_ajf5e-4vQ/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbzdzsVIVwn_bBErNFJ1HS2-0gOYyQ5oEfRYl8BwpBxJ22L2m-XVmWb5laWV1MvlxuyQQQ/exec", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email }),
     })
       .then((response) => {
-        if (response.ok) {
+        if (!response.ok) {
+          throw new Error("Failed to save subscription on the server.");
+        }
+        return response.json(); // Parse the response JSON
+      })
+      .then((data) => {
+        if (data.status === "success") {
           // Send a Thank-You email via EmailJS
           emailjs
             .send("service_ek4oquw", "template_idnoju5", { email })
@@ -1060,11 +1072,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       })
       .catch((error) => {
-        console.error("Error saving email:", error);
-        alert("Failed to subscribe. Please try again.");
+        console.error("Error saving email:", error.message || error);
+        alert("Failed to subscribe. Please try again later.");
       });
   });
 </script>
+
 
 
                 </div>
