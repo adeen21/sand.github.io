@@ -1017,9 +1017,11 @@ document.addEventListener('DOMContentLoaded', () => {
                   <div class="footer-newsletter">
                     <h4>Our Newsletter</h4>
                     <p>Stay updated with the latest insights, trends, and exclusive offers! Sign up for our newsletter and never miss out.</p>
-                    <form action="" method="post" role="form" class="contactForm" id="contact-form">
-                      <input type="email" name="email"><input type="submit"  value="Subscribe">
+                    <form id="contact-form" class="contactForm">
+                      <input type="email" name="email" id="email" placeholder="Enter your email">
+                      <input type="submit" value="Subscribe">
                     </form>
+
                   </div>
                 </div>
 
@@ -1131,45 +1133,38 @@ document.addEventListener('DOMContentLoaded', () => {
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="lib/isotope/isotope.pkgd.min.js"></script>
   <script src="lib/lightbox/js/lightbox.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
-  <script>
-    emailjs.init("VGfOGzIGXBFSpITum"); // Replace YOUR_PUBLIC_KEY with your actual public key from Email.js
-  </script>
-  <script>
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+  (function() {
+    emailjs.init("VGfOGzIGXBFSpITum"); // Replace YOUR_PUBLIC_KEY with your actual EmailJS public key
+  })();
+</script>
+
+<script>
   document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission behavior
+    event.preventDefault(); // Prevent default form submission
 
-    // Get form data
-    const form = event.target;
-    const name = form.name.value;
-    const email = form.email.value;
-    const subject = form.subject.value;
-    const message = form.message.value;
+    // Collect the form data
+    const emailInput = document.getElementById('email').value;
 
-    // Validate form fields
-    if (!name || !email || !message) {
-      alert("Please fill out all required fields.");
+    // Validate email
+    if (!emailInput || !/^\S+@\S+\.\S+$/.test(emailInput)) {
+      alert("Please enter a valid email address.");
       return;
     }
 
-    // Send email using Email.js
+    // Send the email via EmailJS
     emailjs.send("service_ek4oquw", "template_idnoju5", {
-      name: name,
-      email: email,
-      subject: subject,
-      message: message
-    })
-    .then(response => {
-      alert("Message sent successfully!");
-      form.reset(); // Clear the form fields
-    })
-    .catch(error => {
-      console.error("Failed to send message:", error);
-      alert("Failed to send message. Please try again.");
+      email: emailInput
+    }).then(function(response) {
+      alert("Thank you for subscribing!");
+      document.getElementById('contact-form').reset(); // Reset form after success
+    }, function(error) {
+      console.error("EmailJS Error:", error);
+      alert("Oops! Something went wrong. Please try again later.");
     });
   });
 </script>
-
 
 
   <!-- Contact Form JavaScript File -->
