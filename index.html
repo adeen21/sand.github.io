@@ -1041,42 +1041,26 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Save the email to Google Sheets
-    fetch("https://script.google.com/macros/s/AKfycbww44DzmGdVFwA85zGwAupwkDhI9Nl8tjhzJqOgjjdz6zQvXhcpjXp_3rLBHQrKDQvZcQ/exec", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email: email }), // Send email data as JSON
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Failed to save subscription on the server.");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        if (data.status === "success") {
-          // Send a Thank-You email via EmailJS
-          emailjs
-            .send("service_ek4oquw", "template_idnoju5", { email: email })
-            .then(
-              function () {
-                alert("Thank you for subscribing! A confirmation email has been sent.");
-              },
-              function (error) {
-                console.error("Failed to send email:", error);
-                alert("Subscription saved, but confirmation email failed.");
-              }
-            );
-        } else {
-          alert("Failed to save your subscription. Please try again.");
-        }
-      })
-      .catch((error) => {
-        console.error("Error saving email:", error.message || error);
-        alert("Failed to subscribe. Please try again later.");
-      });
+fetch("https://script.google.com/macros/s/AKfycbxdn6TAbeoA6sfeiUjN-DRnXp2sKR95GWlCDEqrGXfR6lHdQtJSauMe3Oo7rUWjpK5U1g/exec", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({ email: "test@example.com" }),
+})
+  .then((response) => response.json())
+  .then((data) => {
+    if (data.status === "success") {
+      alert("Subscription successful!");
+    } else {
+      alert(`Error: ${data.message}`);
+    }
+  })
+  .catch((error) => {
+    console.error("Request failed", error);
+    alert("Failed to subscribe. Please try again.");
+  });
+
   });
 </script>
 
