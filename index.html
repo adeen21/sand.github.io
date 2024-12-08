@@ -1014,64 +1014,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h3>SADN</h3>
                     <p>SADN.uk specializes in delivering innovative digital solutions, including custom web design, app development, digital marketing, branding, and eCommerce services. We empower businesses across industries with creative strategies, cutting-edge technology, and ongoing support to achieve their goals and stand out online.</p>
                   </div>
-
                   <div class="footer-newsletter">
                     <h4>Our Newsletter</h4>
                     <p>Stay updated with the latest insights, trends, and exclusive offers! Sign up for our newsletter and never miss out.</p>
-                    <form id="subscribe-form">
-                      <input type="email" name="email" placeholder="Enter your email" required>
-                      <input type="submit" value="Subscribe">
+                    <form action="" method="post" role="form" class="contactForm" id="contact-form">
+                      <input type="email" name="email"><input type="submit"  value="Subscribe">
                     </form>
                   </div>
-                  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-  // Initialize EmailJS
-  (function () {
-    emailjs.init("VGfOGzIGXBFSpITum"); // Replace with your EmailJS User ID
-  })();
-
-  document.getElementById("subscribe-form").addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const email = document.querySelector('input[name="email"]').value;
-
-    // Validate email format
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      alert("Please enter a valid email address.");
-      return;
-    }
-
-fetch("https://script.google.com/macros/s/AKfycbxdn6TAbeoA6sfeiUjN-DRnXp2sKR95GWlCDEqrGXfR6lHdQtJSauMe3Oo7rUWjpK5U1g/exec", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({ email: "test@example.com" }),
-})
-  .then((response) => response.json())
-  .then((data) => {
-    if (data.status === "success") {
-      alert("Subscription successful!");
-    } else {
-      alert(`Error: ${data.message}`);
-    }
-  })
-  .catch((error) => {
-    console.error("Request failed", error);
-    alert("Failed to subscribe. Please try again.");
-  });
-
-  });
-</script>
-
-
                 </div>
 
                 <div class="col-sm-6">
                   <div class="footer-links">
                     <h4>Useful Links</h4>
                     <ul>
-                      <li><a href="#home">Home</a></li>
+                      <li><a href="#header">Home</a></li>
                       <li><a href="#about">About us</a></li>
                       <li><a href="#services">Services</a></li>
                       <li><a href="https://policies.google.com/terms?hl=en-US$0">Terms of service</a></li>
@@ -1175,6 +1131,47 @@ fetch("https://script.google.com/macros/s/AKfycbxdn6TAbeoA6sfeiUjN-DRnXp2sKR95GW
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="lib/isotope/isotope.pkgd.min.js"></script>
   <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+  <script>
+    emailjs.init("VGfOGzIGXBFSpITum"); // Replace YOUR_PUBLIC_KEY with your actual public key from Email.js
+  </script>
+  <script>
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission behavior
+
+    // Get form data
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const subject = form.subject.value;
+    const message = form.message.value;
+
+    // Validate form fields
+    if (!name || !email || !message) {
+      alert("Please fill out all required fields.");
+      return;
+    }
+
+    // Send email using Email.js
+    emailjs.send("service_ek4oquw", "template_idnoju5", {
+      name: name,
+      email: email,
+      subject: subject,
+      message: message
+    })
+    .then(response => {
+      alert("Message sent successfully!");
+      form.reset(); // Clear the form fields
+    })
+    .catch(error => {
+      console.error("Failed to send message:", error);
+      alert("Failed to send message. Please try again.");
+    });
+  });
+</script>
+
+
+
   <!-- Contact Form JavaScript File -->
   <script src="contactform/contactform.js"></script>
 
