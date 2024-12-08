@@ -117,24 +117,26 @@ jQuery(document).ready(function($) {
 
 });
 
-document.getElementById('contact-form').addEventListener('submit', function(event) {
+document.getElementById('subscribe-form').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevent default form submission
 
   const form = this;
 
-  // Show loading or clear messages
-  document.getElementById('sendmessage').classList.remove('show');
-  document.getElementById('errormessage').classList.remove('show');
+  // Initialize EmailJS
+  emailjs.init('VGfOGzIGXBFSpITum'); // Replace with your public key
 
-  emailjs.sendForm('service_ek4oquw', 'template_idnoju5', form, 'VGfOGzIGXBFSpITum')
+  // Send form data
+  emailjs.sendForm('service_ek4oquw', 'template_idnoju5', form)
     .then(function(response) {
       console.log('SUCCESS!', response.status, response.text);
-      document.getElementById('sendmessage').classList.add('show'); // Show success message
-      form.reset(); // Reset the form fields
+      document.getElementById('success-message').classList.add('show'); // Show success message
+      document.getElementById('success-message').classList.remove('hidden');
+      document.getElementById('error-message').classList.add('hidden'); // Hide error message
+      form.reset(); // Clear the form
     }, function(error) {
       console.error('FAILED...', error);
-      document.getElementById('errormessage').classList.add('show');
-      document.getElementById('errormessage').textContent = 'Error: ' + error.text; // Show error message
+      document.getElementById('error-message').classList.add('show'); // Show error message
+      document.getElementById('error-message').classList.remove('hidden');
+      document.getElementById('success-message').classList.add('hidden'); // Hide success message
     });
 });
-
