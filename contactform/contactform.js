@@ -116,3 +116,25 @@ jQuery(document).ready(function($) {
   });
 
 });
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent default form submission
+
+  const form = this;
+
+  // Show loading or clear messages
+  document.getElementById('sendmessage').classList.remove('show');
+  document.getElementById('errormessage').classList.remove('show');
+
+  emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form, 'YOUR_PUBLIC_KEY')
+    .then(function(response) {
+      console.log('SUCCESS!', response.status, response.text);
+      document.getElementById('sendmessage').classList.add('show'); // Show success message
+      form.reset(); // Reset the form fields
+    }, function(error) {
+      console.error('FAILED...', error);
+      document.getElementById('errormessage').classList.add('show');
+      document.getElementById('errormessage').textContent = 'Error: ' + error.text; // Show error message
+    });
+});
+

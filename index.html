@@ -1017,11 +1017,14 @@ document.addEventListener('DOMContentLoaded', () => {
                   <div class="footer-newsletter">
                     <h4>Our Newsletter</h4>
                     <p>Stay updated with the latest insights, trends, and exclusive offers! Sign up for our newsletter and never miss out.</p>
-                    <form id="contact-form" class="contactForm">
-                      <input type="email" name="email" id="email" placeholder="Enter your email">
-                      <input type="submit" value="Subscribe">
+                    <form id="contact-form">
+                      <input type="text" name="name" placeholder="Your Name" required>
+                      <input type="email" name="email" placeholder="Your Email" required>
+                      <textarea name="message" placeholder="Your Message" required></textarea>
+                      <button type="submit">Send Message</button>
                     </form>
-
+                    <div id="sendmessage" class="hidden">Your message has been sent. Thank you!</div>
+                    <div id="errormessage" class="hidden"></div>
                   </div>
                 </div>
 
@@ -1141,29 +1144,27 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <script>
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent default form submission
 
-    // Collect the form data
-    const emailInput = document.getElementById('email').value;
+  const form = this;
 
-    // Validate email
-    if (!emailInput || !/^\S+@\S+\.\S+$/.test(emailInput)) {
-      alert("Please enter a valid email address.");
-      return;
-    }
+  // Show loading or clear messages
+  document.getElementById('sendmessage').classList.remove('show');
+  document.getElementById('errormessage').classList.remove('show');
 
-    // Send the email via EmailJS
-    emailjs.send("service_ek4oquw", "template_idnoju5", {
-      email: emailInput
-    }).then(function(response) {
-      alert("Thank you for subscribing!");
-      document.getElementById('contact-form').reset(); // Reset form after success
+  emailjs.sendForm('service_ek4oquw', 'template_idnoju5', form, 'VGfOGzIGXBFSpITum')
+    .then(function(response) {
+      console.log('SUCCESS!', response.status, response.text);
+      document.getElementById('sendmessage').classList.add('show'); // Show success message
+      form.reset(); // Reset the form fields
     }, function(error) {
-      console.error("EmailJS Error:", error);
-      alert("Oops! Something went wrong. Please try again later.");
+      console.error('FAILED...', error);
+      document.getElementById('errormessage').classList.add('show');
+      document.getElementById('errormessage').textContent = 'Error: ' + error.text; // Show error message
     });
-  });
+});
+
 </script>
 
 
