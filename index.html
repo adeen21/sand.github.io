@@ -1018,10 +1018,54 @@ document.addEventListener('DOMContentLoaded', () => {
                   <div class="footer-newsletter">
                     <h4>Our Newsletter</h4>
                     <p>Stay updated with the latest insights, trends, and exclusive offers! Sign up for our newsletter and never miss out.</p>
-                    <form action="" method="post">
-                      <input type="email" name="email"><input type="submit"  value="Subscribe">
+                    <form id="subscribe-form">
+                      <input type="email" name="email" placeholder="Enter your email" required>
+                      <input type="submit" value="Subscribe">
                     </form>
                   </div>
+                  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  // Initialize EmailJS
+  (function () {
+    emailjs.init("VGfOGzIGXBFSpITum"); // Replace with your EmailJS User ID
+  })();
+
+  document.getElementById("subscribe-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const email = document.querySelector('input[name="email"]').value;
+
+    // Save the email to Google Sheets
+    fetch("https://script.google.com/macros/s/AKfycby_vZO9Lz0zUyyIAdYN_nehDsdfg1aXPEojOhJRw7LDd07Kt9Z-iDl7hpRa_ajf5e-4vQ/exec", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email }),
+    })
+      .then((response) => {
+        if (response.ok) {
+          // Send a Thank-You email via EmailJS
+          emailjs
+            .send("service_ek4oquw", "template_idnoju5", { email })
+            .then(
+              function () {
+                alert("Thank you for subscribing! A confirmation email has been sent.");
+              },
+              function (error) {
+                console.error("Failed to send email:", error);
+                alert("Subscription successful, but confirmation email failed.");
+              }
+            );
+        } else {
+          alert("Failed to save your subscription. Please try again.");
+        }
+      })
+      .catch((error) => {
+        console.error("Error saving email:", error);
+        alert("Failed to subscribe. Please try again.");
+      });
+  });
+</script>
+
 
                 </div>
 
