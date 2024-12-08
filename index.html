@@ -1134,37 +1134,7 @@ document.addEventListener('DOMContentLoaded', () => {
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="lib/isotope/isotope.pkgd.min.js"></script>
   <script src="lib/lightbox/js/lightbox.min.js"></script>
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script type="text/javascript">
-  (function() {
-    emailjs.init("VGfOGzIGXBFSpITum"); // Replace YOUR_PUBLIC_KEY with your actual EmailJS public key
-  })();
-</script>
-
-<script>
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent default form submission
-
-  const form = this;
-
-  // Show loading or clear messages
-  document.getElementById('sendmessage').classList.remove('show');
-  document.getElementById('errormessage').classList.remove('show');
-
-  emailjs.sendForm('service_ek4oquw', 'template_idnoju5', form, 'VGfOGzIGXBFSpITum')
-    .then(function(response) {
-      console.log('SUCCESS!', response.status, response.text);
-      document.getElementById('sendmessage').classList.add('show'); // Show success message
-      form.reset(); // Reset the form fields
-    }, function(error) {
-      console.error('FAILED...', error);
-      document.getElementById('errormessage').classList.add('show');
-      document.getElementById('errormessage').textContent = 'Error: ' + error.text; // Show error message
-    });
-});
-
-</script>
-
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
   <!-- Contact Form JavaScript File -->
   <script src="contactform/contactform.js"></script>
